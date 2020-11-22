@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <title>CONTATO - IFSP - Pirituba - DWBA4</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>CONTATO - IFSP - Pirituba - DWBA4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
-        <object width="100%" height="65px" data="components/header.html"></object>
+<body>
 
-        <h3>CONTATO</h3>
-        <hr>
+    <header id="topo">
+        <object width="100%" height="160px" data="components/menu.html"></object>
+    </header>
 
-        <object width="100%" height="65px" data="components/footer.html"></object>
-    </body>
+    <h3>Mande uma mensagem</h3>
+    <hr>
+
+    <form method="POST">
+        <ul>
+            <li>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            </li>
+            <li>
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email">
+            </li>
+            <li>
+                <label for="telefone">Telefone </label>
+                <input type="tel" name="telefone" id="telefone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$">
+                <span>(99) 99999-9999</span> </li>
+            <li>
+                <label for="assunto">Assunto</label>
+                <select name="assunto" id="assunto" required>
+                    <option value=""> -- Selecione --</option>
+                    <option value="R">Reclamação</option>
+                    <option value="S">Sugestão</option>
+                </select>
+            </li>
+            <li>
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem"></textarea>
+            </li>
+            <li>
+                <fieldset>
+                    <legend>Opções de Resposta</legend>
+                    <label for="resposta-email">E-Mail
+                        <input id="resposta-email" type="checkbox" name="resposta" value="E">
+                    </label>
+                    <label for="resposta-telefone">Telefone</label>
+                    <input id="resposta-telefone" type="checkbox" name="resposta" value="T">
+                </fieldset>
+            </li>
+            <li>
+                <button type="submit">Enviar</button>
+            </li>
+        </ul>
+    </form>
+
+    <object width="100%" height="150px" data="components/footer.html"></object>
+</body>
+
 </html>
