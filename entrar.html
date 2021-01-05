@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>ENTRAR - IFSP - Pirituba - DWBA4</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/entrar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,29 +15,34 @@
         <object width="100%" height="190px" data="components/menu.html"></object>
     </header>
 
-    <main id="conteudo">
-    <h1>Entrar</h1>
-    <hr><br><br>
+    <main>
+        <center>
+        <form class="form-signin">
+            
+            <img class="mb-4" src="img/ifsp.png" alt="Logo do IFSP" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
 
-    <form method="POST">
-        <div>
-            <label for="usuario">Usuário</label>
-            <input type="text" name="usuario" id="usuario" required="">
-        </div>
-        <br>
-        <div>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" required="">
-        </div>
-        <br>
-        <div>
-            <input type="submit" value="Entrar">
-            <a href="#">Esqueci a senha</a>
-        </div>
-    </form>
+            <label for="inputEmail" class="sr-only">Endereço de email</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+            
+            <label for="inputPassword" class="sr-only">Senha</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+            
+            <div class="checkbox mb-3">
+                <label><input type="checkbox" value="remember-me">Lembrar de mim</label>
+            </div>
+            <div>
+                <a href="#">Esqueci a senha</a>
+            </div>
+            
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+        
+        </form>
+        </center>
     </main>
 
     <object width="100%" height="170px" data="components/footer.html"></object>
-</body>
 
+</body>
 </html>
