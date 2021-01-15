@@ -34,10 +34,10 @@ class Table extends React.Component {
     render() {
         return (
             <div>
-                <h2 id='title'>Componentes curriculares</h2>
-                <table id='componentes'>
+                <center><h2 id='title'>Componentes curriculares</h2></center>
+                <table class='table table-striped table-hover' id='componentes'>
                     <thead>
-                        <tr>{this.tableHeader()}</tr>
+                        <tr class='table-success'>{this.tableHeader()}</tr>
                     </thead>
                     <tbody>
                         {this.tableData()}
